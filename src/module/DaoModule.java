@@ -2,28 +2,28 @@ package module;
 
 import dao.NamotDao;
 import dao.SorumDao;
-import dao.MerekDao;
+import dao.MermoDao;
 
 public class DaoModule {
-    private final NamotDao jenisHewanDao;
-    private final MerekDao habitatDao;
-    private final SorumDao hewanDao;
+    private final NamotDao namotDao;
+    private final MermoDao mermoDao;
+    private final SorumDao sorumDao;
 
     public DaoModule() {
-        this.jenisHewanDao = new NamotDao();
-        this.habitatDao = new MerekDao();
-        this.hewanDao = new SorumDao();
+        this.namotDao = new NamotDao();
+        this.mermoDao = new MermoDao();
+        this.sorumDao = new SorumDao();
     }
 
-    public NamotDao getJenisHewanDao() {
-        return jenisHewanDao;
+    public NamotDao getNamotDao() {
+        return namotDao;
     }
 
-    public MerekDao getHabitatDao() {
-        return habitatDao;
+    public MermoDao getMermoDao() {
+        return mermoDao;
     }
 
-    public SorumDao getHewanDao() {
-        return hewanDao;
+    public SorumDao getSorumDao() {
+        return sorumDao;
     }
 }

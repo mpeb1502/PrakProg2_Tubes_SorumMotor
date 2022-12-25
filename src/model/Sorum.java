@@ -1,13 +1,13 @@
 package model;
 
-// Getter And Setter
+// Getter AND Setter halaman SORUM
 public class Sorum {
     private String id;
-    private String nama;
-    private String umur;
-    private String jenisKelamin;
-    private Namot jenisHewan;
-    private Merek habitat;
+    private String namapem;
+    private String alamat;
+    private String jenismot;
+    private Namot namot;
+    private Mermo mermo;
 
     public String getId() {
         return id;
@@ -17,44 +17,44 @@ public class Sorum {
         this.id = id;
     }
 
-    public String getNama() {
-        return nama;
+    public String getNamapem() {
+        return namapem;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setNamapem(String namapem) {
+        this.namapem = namapem;
     }
 
-    public String getUmur() {
-        return umur;
+    public String getAlamat() {
+        return alamat;
     }
 
-    public void setUmur(String umur) {
-        this.umur = umur;
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
     }
 
-    public String getJenisKelamin() {
-        return jenisKelamin;
+    public String getJenismot() {
+        return jenismot;
     }
 
-    public void setJenisKelamin(String jenisKelamin) {
-        this.jenisKelamin = jenisKelamin;
+    public void setJenismot(String jenismot) {
+        this.jenismot = jenismot;
     }
 
-    public Namot getJenisHewan() {
-        return jenisHewan;
+    public Namot getNamot() {
+        return namot;
     }
 
-    public void setJenisHewan(Namot jenisHewan) {
-        this.jenisHewan = jenisHewan;
+    public void setNamot(Namot namot) {
+        this.namot = namot;
     }
 
-    public Merek getHabitat() {
-        return habitat;
+    public Mermo getMermo() {
+        return mermo;
     }
 
-    public void setHabitat(Merek habitat) {
-        this.habitat = habitat;
+    public void setMermo(Mermo mermo) {
+        this.mermo = mermo;
     }
 
 }

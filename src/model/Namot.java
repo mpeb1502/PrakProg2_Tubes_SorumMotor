@@ -1,9 +1,9 @@
 package model;
 
-// Jenis Hewan Getter AND Setter
+// Getter AND Setter halaman nama motor
 public class Namot {
     private String id;
-    private String jenis;
+    private String namamotor;
 
     public String getId() {
         return id;
@@ -13,11 +13,11 @@ public class Namot {
         this.id = id;
     }
 
-    public String getJenis() {
-        return jenis;
+    public String getNamamotor() {
+        return namamotor;
     }
 
-    public void setJenis(String jenis) {
-        this.jenis = jenis;
+    public void setNamamotor(String namamotor) {
+        this.namamotor = namamotor;
     }
 }

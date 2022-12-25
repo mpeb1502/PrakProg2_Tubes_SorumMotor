@@ -8,16 +8,17 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.List;
 import java.util.ArrayList;
-import model.Namot;
+import model.Mermo;
 
-public class NamotDao {
-    public int insert(Namot namamotor) {
+public class MermoDao {
+    //  Get Insert Merekmotor Dao in Database
+    public int insert(Mermo merekmotor) {
         int result = -1;
         try (Connection connection = MySqlConnection.getInstance().getConnection()) {
             PreparedStatement statement = connection
-                    .prepareStatement("insert into namot (id, namamotor) value (?, ?)");
-            statement.setString(1, namamotor.getId());
-            statement.setString(2, namamotor.getNamamotor());
+                    .prepareStatement("insert into mermo (id, merekmotor) value (?, ?)");
+            statement.setString(1, merekmotor.getId());
+            statement.setString(2, merekmotor.getMerekmotor());
 
             result = statement.executeUpdate();
         } catch (SQLException e) {
@@ -26,13 +27,14 @@ public class NamotDao {
         return result;
     }
 
-    public int update(Namot namamotor) {
+    // Update Habitat Dao in Database
+    public int update(Mermo merekmotor) {
         int result = -1;
         try (Connection connection = MySqlConnection.getInstance().getConnection()) {
             PreparedStatement statement = connection
-                    .prepareStatement("update namot set namamotor = ? where id = ?");
-            statement.setString(1, namamotor.getNamamotor());
-            statement.setString(2, namamotor.getId());
+                    .prepareStatement("update mermo set merekmotor = ? where id = ?");
+            statement.setString(1, merekmotor.getMerekmotor());
+            statement.setString(2, merekmotor.getId());
 
             result = statement.executeUpdate();
         } catch (SQLException e) {
@@ -41,12 +43,13 @@ public class NamotDao {
         return result;
     }
 
-    public int delete(Namot namamotor) {
+    // Delete Habibat dao in database
+    public int delete(Mermo merekmotor) {
         int result = -1;
         try (Connection connection = MySqlConnection.getInstance().getConnection()) {
             PreparedStatement statement = connection
-                    .prepareStatement("delete from namot where id = ?");
-            statement.setString(1, namamotor.getId());
+                    .prepareStatement("delete from mermo where id = ?");
+            statement.setString(1, merekmotor.getId());
 
             result = statement.executeUpdate();
         } catch (SQLException e) {
@@ -55,17 +58,17 @@ public class NamotDao {
         return result;
     }
 
-    public List<Namot> findAll() {
-        List<Namot> list = new ArrayList<>();
+    public List<Mermo> findAll() {
+        List<Mermo> list = new ArrayList<>();
         try (Connection connection = MySqlConnection.getInstance().getConnection();
                 Statement statement = connection.createStatement();) {
-            try (ResultSet resultSet = statement.executeQuery("select * from namot");) {
+            try (ResultSet resultSet = statement.executeQuery("select * from mermo");) {
                 // Retrieving the data
                 while (resultSet.next()) {
-                    Namot namamotor = new Namot();
-                    namamotor.setId(resultSet.getString("id"));
-                    namamotor.setNamamotor(resultSet.getString("namamotor"));
-                    list.add(namamotor);
+                    Mermo merekmotor = new Mermo();
+                    merekmotor.setId(resultSet.getString("id"));
+                    merekmotor.setMerekmotor(resultSet.getString("merekmotor"));
+                    list.add(merekmotor);
                 }
             } catch (Exception e) {
                 e.printStackTrace();

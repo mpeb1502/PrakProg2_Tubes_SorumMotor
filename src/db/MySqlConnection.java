@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class MySqlConnection {
 
     // Setting of Database
-    private final static String DB_URL = "jdbc:mysql://localhost:3306/pp2_sorum";
+    private final static String DB_URL = "jdbc:mysql://localhost:3306/pp2_sorum_tubes";
     private final static String DB_USER = "root";
     private final static String DB_PASS = "";
     // End off Setting Database
