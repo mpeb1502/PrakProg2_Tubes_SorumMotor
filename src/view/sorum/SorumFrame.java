@@ -36,11 +36,11 @@ public class SorumFrame extends JFrame {
     
 
     public SorumFrame() {
-        // Tampilan >>>>
+        // Tampilan Background >>>>
         carIcon = new ImageIcon(this.getClass().getResource("../bgwow.jpg"));
         myLabel = new JLabel(carIcon);
         myLabel.setSize(1360,800);
-        // Tampilan <<<<
+        // Tampilan Background <<<<
 
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
@@ -171,11 +171,11 @@ public class SorumFrame extends JFrame {
     }
 
     public Mermo getMerekmotor() {
-        return mermoList.get(comboNamot.getSelectedIndex());
+        return mermoList.get(comboMerek.getSelectedIndex());
     }
 
     public Namot getNamamotor() {
-        return namotList.get(comboMerek.getSelectedIndex());
+        return namotList.get(comboNamot.getSelectedIndex());
     }
 
     public void addSorum(Sorum sorum) {

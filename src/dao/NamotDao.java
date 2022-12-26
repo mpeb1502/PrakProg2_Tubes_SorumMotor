@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import model.Namot;
 
 public class NamotDao {
+
+    //  Get Insert Nama motor Dao in Database
     public int insert(Namot namamotor) {
         int result = -1;
         try (Connection connection = MySqlConnection.getInstance().getConnection()) {
@@ -26,6 +28,7 @@ public class NamotDao {
         return result;
     }
 
+    //  Get Update Nama motor Dao in Database
     public int update(Namot namamotor) {
         int result = -1;
         try (Connection connection = MySqlConnection.getInstance().getConnection()) {

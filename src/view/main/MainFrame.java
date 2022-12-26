@@ -22,11 +22,11 @@ public class MainFrame extends JFrame {
 
     public MainFrame() {
         
-        // Tampilan >>>>
+        // Tampilan Background >>>>
         carIcon = new ImageIcon(this.getClass().getResource("../bgwow.jpg"));
         myLabel = new JLabel(carIcon);
         myLabel.setSize(1360,800);
-        // Tampilan <<<<
+        // Tampilan Background <<<<
         
         JLabel labelInput = new JLabel("<<--Selamat Datang di Sorum NoTa-->>");
         labelInput.setForeground(Color.WHITE);

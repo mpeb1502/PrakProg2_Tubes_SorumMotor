@@ -21,11 +21,12 @@ public class MermoFrame extends JFrame {
 
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-        // Tampilan >>>>
+        // Tampilan Background >>>>
         carIcon = new ImageIcon(this.getClass().getResource("../bgwow.jpg"));
         myLabel = new JLabel(carIcon);
         myLabel.setSize(1360,800);
-        // Tampilan <<<<
+        // Tampilan Background <<<<
+        
         // CSS Java untuk title apk dan icon 
         this.setTitle("<< Aplikasi Sorum Nota >>");
         this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../sorum.png")));

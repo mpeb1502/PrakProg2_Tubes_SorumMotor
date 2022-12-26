@@ -27,7 +27,7 @@ public class MermoDao {
         return result;
     }
 
-    // Update Habitat Dao in Database
+    // Update Merekmotor Dao in Database
     public int update(Mermo merekmotor) {
         int result = -1;
         try (Connection connection = MySqlConnection.getInstance().getConnection()) {
@@ -43,7 +43,7 @@ public class MermoDao {
         return result;
     }
 
-    // Delete Habibat dao in database
+    // Delete Merekmotor dao in database
     public int delete(Mermo merekmotor) {
         int result = -1;
         try (Connection connection = MySqlConnection.getInstance().getConnection()) {
